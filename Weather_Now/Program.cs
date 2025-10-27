@@ -25,13 +25,13 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Weather}/{action=Index}/{id?}");
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-app.Urls.Add($"http://*:{port}");
+//var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+//app.Urls.Add($"http://*:{port}");
 
-app.MapGet("/", context =>
-{
-    context.Response.Redirect("/Weather");
-    return Task.CompletedTask;
-});
+//app.MapGet("/", context =>
+//{
+//    context.Response.Redirect("/Weather");
+//    return Task.CompletedTask;
+//});
 
 app.Run();
