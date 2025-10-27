@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: weather-now
+    env: dotnet
+    buildCommand: "cd Weather_Now && dotnet publish -c Release -o out"
+    startCommand: "dotnet out/Weather_Now.dll"
+    publishDirectory: "Weather_Now/out"
+    plan: free
