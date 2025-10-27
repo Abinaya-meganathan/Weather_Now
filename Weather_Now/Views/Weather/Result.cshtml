@@ -1,0 +1,17 @@
+﻿@model Weather_Now.Models.WeatherNowModel
+
+@{
+    ViewData["Title"] = "Weather Result";
+}
+
+<div class="text-center mt-5">
+    <h2>🌤 Weather Report for @Model.City</h2>
+
+    <div class="card w-50 mx-auto mt-4 p-4 shadow-sm">
+        <p><strong>Temperature:</strong> @Model.Temperature °C</p>
+        <p><strong>Wind Speed:</strong> @Model.WindSpeed km/h</p>
+        <p><strong>Description:</strong> @Model.WeatherDescription</p>
+    </div>
+
+    <a href="/Weather/Index" class="btn btn-secondary mt-4">Back</a>
+</div>

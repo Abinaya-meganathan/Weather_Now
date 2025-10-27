@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Weather Now";
+}
+
+<div class="text-center mt-5">
+    <h2>🌤 Weather Now</h2>
+    <p>Enter your city name to see current weather</p>
+
+    <form asp-action="GetWeather" method="post" class="mt-3">
+        <input type="text" name="city" placeholder="Enter city" class="form-control w-50 mx-auto" />
+        <button type="submit" class="btn btn-primary mt-3">Get Weather</button>
+    </form>
+
+    @if (ViewBag.Error != null)
+    {
+        <p class="text-danger mt-3">@ViewBag.Error</p>
+    }
+</div>
